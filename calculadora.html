@@ -23,6 +23,27 @@ height: 1.5%;
 background-color: rgb(235, 239, 1);
 }
 </style>
+<script>
+  //função para adicionar valor
+  function adicionar(valor){
+    document.getElementById("visor").value += valor;
+  }
+
+  //função para limpar o visor
+  function limpar(){
+    document.getElementById("visor").value ="";
+  }
+
+  //função para calcular
+  function calcular(){
+     var visor = document.getElementById("visor");
+     try{
+      visor.value = eval(visor.value);
+     }catch(error){
+        visor.value = "Erro";
+     }
+  }
+</script>
 </head>
 <body>
 <input type="text" id="visor">
